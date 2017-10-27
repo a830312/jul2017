@@ -12,7 +12,7 @@ class People extends Component {
     }
   }
 
-  _fetchUsers(results = 10) {
+  _fetchUsers(results = 12) {
     fetch(`https://randomuser.me/api/?results=${results}`, {mode: 'cors'})
       .then((response) => {
         return response.json()
@@ -36,7 +36,7 @@ class People extends Component {
     let { users } = this.state
 
     return (
-      <div>
+      <div className="people">
         {
           users.map((user, i) => <User data={user} key={`user-${i}`} />)
         }

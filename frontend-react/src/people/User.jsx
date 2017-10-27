@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { get as _get } from 'lodash'
+import './user.scss'
 
 class User extends Component {
   render() {
@@ -11,11 +12,13 @@ class User extends Component {
         lastName = _get(data, 'lastName', '')
 
     return (
-      <div>
-        <image src={avatar} />
-        <div>{`${firstName} ${lastName}`}</div>
-        <div>{email}</div>
-        <div>{registered}</div>
+      <div className="user">
+        <div className="user__wrapper">
+          <div className="user__avatar" style={{backgroundImage: `url('${avatar}')`}} />
+          <div className="user__name">{`${firstName} ${lastName}`}</div>
+          <div className="user__email">{email}</div>
+          <div className="user__join">{registered}</div>
+        </div>
       </div>
     )
   }
