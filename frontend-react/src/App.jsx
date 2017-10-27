@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import People from './people'
 
-class MyComponent extends Component {
+class App extends Component {
   render() {
-    return <div>Hello World...!!!</div>;
+    return (
+      <div>
+        <People />
+      </div>
+    )
   }
 }
 
-export default MyComponent
+export default App
