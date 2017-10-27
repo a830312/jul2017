@@ -1,0 +1,24 @@
+{
+  "name": "ts-techtest-frontend",
+  "version": "1.0.0",
+  "description": "Tallysticks Front-end Technical Test (Vue.js)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build"
+  },
+  "author": "George Wilson",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "neutrino": "^6.1.4",
+    "neutrino-preset-vue": "^2.2.0",
+    "neutrino-preset-web": "^6.1.4",
+    "node-sass": "^4.5.3",
+    "normalize-scss": "^7.0.0",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "vue": "^2.3.4"
+  }
+}
