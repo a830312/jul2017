@@ -9,8 +9,9 @@ class User extends Component {
         avatar = _get(data, 'picture.large', ''),
         email = _get(data, 'email', ''),
         registered = _get(data, 'registered', ''),
-        firstName = _get(data, 'firstName', ''),
-        lastName = _get(data, 'lastName', ''),
+        name = _get(data, 'name', ''),
+        firstName = _get(name, 'first', ''),
+        lastName = _get(name, 'last', ''),
         join = registered ? moment(registered, 'YYYY-MM-DD HH:mm:ss').format("ddd, DD MMM YYYY kk:mm:ss") : ''
 
     return (

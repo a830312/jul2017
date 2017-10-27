@@ -49,7 +49,9 @@ class People extends Component {
           {
             users.map((user, i) => <User data={user} key={`user-${i}`} />)
           }
-          <button onClick={this._handleLoadMoreClicked} className="people__fetch">Load More</button>
+          <div className="people__btn-container">
+            <button onClick={this._handleLoadMoreClicked} className="people__fetch">Load More</button>
+          </div>
         </div>
       </div>
     )
