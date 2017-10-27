@@ -13,11 +13,11 @@
   flex-wrap: wrap;
   max-width: 1280px;
   margin: auto;
+  padding: 10px 0 10px 20px;
   &__fetch {
-    margin: 10px;
+    margin: 10px 20px 10px 0;
     width: 100%;
     display: block;
-    padding: 20px 0;
     color: white;
     text-align: center;
     font-size: 1rem;
@@ -30,12 +30,13 @@
   text-align: center;
   background-color: white;
   @include border();
-  margin: 10px;
+  margin: 10px 20px 10px 0;
   box-sizing: content-box;
   flex: 1;
   
+  
   &__wrapper {
-    width: 300px;
+    width: 320px;
     padding: 20px;
     margin: auto;
   }
@@ -58,6 +59,7 @@
       display: block;
       color: gray;
       content: "join";
+      font-weight: bold;
     }
     color: gray;
   }

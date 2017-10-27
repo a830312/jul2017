@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { get as _get } from 'lodash'
-import User from './User'
+import User from './user'
 
 class People extends Component {
   constructor(props) {
@@ -20,9 +20,8 @@ class People extends Component {
       })
       .then((result) => {
         let results = _get(result, 'results', [])
-        
         currentUsers = currentUsers.concat(results)
-        console.log(results, currentUsers)
+
         this.setState({
           users: currentUsers
         })

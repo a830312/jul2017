@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { get as _get } from 'lodash'
+import moment from 'moment'
 import './user.scss'
 
 class User extends Component {
@@ -9,7 +10,8 @@ class User extends Component {
         email = _get(data, 'email', ''),
         registered = _get(data, 'registered', ''),
         firstName = _get(data, 'firstName', ''),
-        lastName = _get(data, 'lastName', '')
+        lastName = _get(data, 'lastName', ''),
+        join = registered ? moment(registered, 'YYYY-MM-DD HH:mm:ss').format("ddd, DD MMM YYYY kk:mm:ss") : ''
 
     return (
       <div className="user">
@@ -17,7 +19,7 @@ class User extends Component {
           <div className="user__avatar" style={{backgroundImage: `url('${avatar}')`}} />
           <div className="user__name">{`${firstName} ${lastName}`}</div>
           <div className="user__email">{email}</div>
-          <div className="user__join">{registered}</div>
+          <div className="user__join">{`${join} GMT`}</div>
         </div>
       </div>
     )
